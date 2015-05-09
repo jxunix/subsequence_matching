@@ -233,12 +233,12 @@ For each input $(Q, X, \mathrm{candidate}, \mathrm{index})$, where $Q$ is the qu
 			\State cost$[i][j] = |Q_i - X_j| +$ cost$[p_i][p_j]$;
 			\State endpoint$[i][j]$ = endpoint$[p_i][p_j]$;
 		\EndFor
-		\State $\mathrm{key} = \mathrm{index}\ \%\ \mathrm{total\_nodes}$;
-		\State distance = cost[1][$j$];
-		\State $j_{\mathrm{start}} = j$;
-		\State $j_{\mathrm{end}} = \mathrm{endpoint}[1][j]$;
-		\State Emit($Q$, $X$, key, distance, $j_{\mathrm{start}}$, $j_{\mathrm{end}}$);
 	\EndWhile
+	\State $\mathrm{key} = \mathrm{index}\ \%\ \mathrm{total\_nodes}$;
+	\State distance = cost[1][$j$];
+	\State $j_{\mathrm{start}} = j$;
+	\State $j_{\mathrm{end}} = \mathrm{endpoint}[1][j]$;
+	\State Emit($Q$, $X$, key, distance, $j_{\mathrm{start}}$, $j_{\mathrm{end}}$);
 	\end{algorithmic}
 \end{algorithm}
 
